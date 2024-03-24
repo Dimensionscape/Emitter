@@ -57,7 +57,7 @@ emitter.emit(TEST, 42);
 emitter.off(TEST, callback);
 ```
 
-For more advanced usage and detailed documentation, please refer to the code documentation or check out the examples in the example/ directory.
+For more advanced usage and detailed information, please refer to the code documentation or check out the examples in the example/ directory.
 
 ## Requirements
 
