@@ -6,7 +6,7 @@ Emitter provides a simple yet powerful and extendable event-like signal emitter 
 
 - **Type Safety**: Callback functions are typed, ensuring that the arguments passed match the expected types.
 - **Multiple Signals**: Supports multiple signals, each with its own set of subscribed callbacks.
-- **Arbitrary Callback Parameters**: Supports multiple callback type parameters without relying on object creation seen in a typical "EventDispatcher: while also perserving type safety checks in order to avoid errors.
+- **Arbitrary Callback Parameters**: Supports multiple callback type parameters without relying on object creation seen in a typical "EventDispatcher" while also perserving type safety checks in order to avoid errors.
 - **Subscription Management**: Easily subscribe to, unsubscribe from and control emitters.
 - **Flexible Event Handling**: Supports emitting signals with varying numbers of arguments, including both typed and untyped variations.
 - **Simple API**: Designed to be straightforward and easy to use.
