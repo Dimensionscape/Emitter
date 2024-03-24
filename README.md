@@ -13,6 +13,7 @@ Emitter provides a simple yet powerful and extendable event-like signal emitter 
 - **High Performance**: Built for real world use cases with performance in mind. Emitter outperforms most if not all other available alternative haxelibs designed for event handling.
 - **Extendability and Reusability**: Designed for maximum extendability and reusability.
 - **Chaining**: Method calls can be chained together for concise and readable code.
+- **GC Friendly**: Avoids excessive object creation leading to a smaller resource footprint and less garbage collection. 
 
 ## Installation
 
