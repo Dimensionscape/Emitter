@@ -26,15 +26,18 @@ haxelib install emitter
 
 Here's a basic example of how to use the library:
 
+# Imports
 ```hx
 import emitter.signals.Emitter;
 import emitter.signals.SignalType;
 ```
 
+# Create the Signal
 ```hx
 public static inline var TEST:SignalType1<Int->Void, Int> = "test";
 ```
 
+# Instantiate a new Emitter and assign a callback to your signal
 ```hx
 // Create an instance of Emitter
 var emitter:Emitter = new Emitter();
