@@ -1,0 +1,11 @@
+{
+	"name": "Emitter",
+	"url" : "https://github.com/Dimensionscape/Emitter",
+	"license": "MIT",
+	"tags": ["eventdispatcher", "eventemitter", "signal", "signals", "event", "emitter", "dispatcher","events", "observer"],
+    "description": "Emitter is a tiny, ultra lightweight and super performant signal-like event handling library with type safety.",
+	"version": "0.9.0",
+	"classPath": "src/",
+	"releasenote": "Initial haxelib release.",
+	"contributors": [ "Dimensionscape" ]
+}
