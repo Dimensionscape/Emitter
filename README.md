@@ -55,7 +55,7 @@ emitter.off(TEST, callback);
 
 For more advanced usage and detailed documentation, please refer to the code documentation or check out the examples in the example/ directory.
 
-##Requirements
+## Requirements
 
 - **Haxe 4.2+**
 
