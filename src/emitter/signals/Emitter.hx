@@ -22,6 +22,7 @@ import emitter.util.TypedFunction;
  * @see Emitter#prepend
  * @see Emitter#hasSignal
  */
+
 class Emitter
 {
 	@:noCompletion private var __signals:Map<String, Array<Function>>;
@@ -96,15 +97,17 @@ class Emitter
 	*/
 	overload extern public inline function emit<T>(type:SignalType<T>):Void
 	{
-		if (__signals.exists(type))
-		{
-			var signalsOfType = __signals.get(type);
 
+		var signalsOfType = __signals.get(type);
+
+		if (signalsOfType != null)
+		{
 			for (callback in signalsOfType)
 			{
 				callback();
 			}
 		}
+
 	}
 
 	/**
@@ -112,17 +115,20 @@ class Emitter
 	 * @param type The type of signal to emit.
 	 * @param a The argument to pass to the callback functions.
 	 */
+
 	overload extern public inline function emit<T, T1>(type:SignalType1<T, T1>, a:T1):Void
 	{
-		if (__signals.exists(type))
-		{
-			var signalsOfType = __signals.get(type);
 
+		var signalsOfType:Array<Function> = __signals.get(type);
+
+		if (signalsOfType != null)
+		{
 			for (callback in signalsOfType)
 			{
 				callback(a);
 			}
 		}
+
 	}
 
 	/**
@@ -133,17 +139,17 @@ class Emitter
 	 */
 	overload extern public inline function emit<T, T1, T2>(type:SignalType2<T, T1, T2>, a:T1, b:T2):Void
 	{
-		if (__signals.exists(type))
-		{
-			var signalsOfType = __signals.get(type);
 
+		var signalsOfType = __signals.get(type);
+		if (signalsOfType != null)
+		{
 			for (callback in signalsOfType)
 			{
 				callback(a, b);
 			}
 		}
 	}
-	
+
 	/**
 	 * Emits the specified signal with three arguments.
 	 * @param type The type of signal to emit.
@@ -153,10 +159,10 @@ class Emitter
 	 */
 	overload extern public inline function emit<T, T1, T2, T3>(type:SignalType3<T, T1, T2, T3>, a:T1, b:T2, c:T3):Void
 	{
-		if (__signals.exists(type))
-		{
-			var signalsOfType = __signals.get(type);
 
+		var signalsOfType = __signals.get(type);
+		if (signalsOfType != null)
+		{
 			for (callback in signalsOfType)
 			{
 				callback(a, b, c);
@@ -174,17 +180,17 @@ class Emitter
 	 */
 	overload extern public inline function emit<T, T1, T2, T3, T4>(type:SignalType4<T, T1, T2, T3, T4>, a:T1, b:T2, c:T3, d:T4):Void
 	{
-		if (__signals.exists(type))
-		{
-			var signalsOfType = __signals.get(type);
 
+		var signalsOfType = __signals.get(type);
+		if (signalsOfType != null)
+		{
 			for (callback in signalsOfType)
 			{
 				callback(a, b, c, d);
 			}
 		}
 	}
-	
+
 	/**
 	 * Emits the specified signal with five arguments.
 	 * @param type The type of signal to emit.
@@ -196,10 +202,10 @@ class Emitter
 	 */
 	overload extern public inline function emit<T, T1, T2, T3, T4, T5>(type:SignalType5<T, T1, T2, T3, T4, T5>, a:T1, b:T2, c:T3, d:T4, e:T5):Void
 	{
-		if (__signals.exists(type))
-		{
-			var signalsOfType = __signals.get(type);
 
+		var signalsOfType = __signals.get(type);
+		if (signalsOfType != null)
+		{
 			for (callback in signalsOfType)
 			{
 				callback(a, b, c, d, e);
@@ -216,10 +222,10 @@ class Emitter
 	 */
 	public function emitUntyped<T>(type:SignalType<T>, ...args:Dynamic):Void
 	{
-		if (__signals.exists(type))
-		{
-			var signalsOfType = __signals.get(type);
 
+		var signalsOfType = __signals.get(type);
+		if (signalsOfType != null)
+		{
 			for (callback in signalsOfType)
 			{
 				if (args == null)
